@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+/* font-family: 'Inter', sans-serif; */
+
+:root {
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+body {
+  height: 200vh;
+}
+
+.header {
+  margin: 0;
+  height: 50px;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo {
+  height: 30px;
+  filter: invert(4%) sepia(95%) saturate(2893%) hue-rotate(218deg)
+    brightness(85%) contrast(119%);
+}
+
+.header .nave .nav-btn {
+  display: block;
+  height: 2px;
+  width: 30px;
+  background-color: var(--Very-dark-blue);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
