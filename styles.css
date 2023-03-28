@@ -12,12 +12,15 @@
 
 body {
   height: 200vh;
+  overflow-x: hidden;
 }
 
 .header {
+  background-color: var(--Off-white);
+  position: fixed;
+  width: 95%;
   margin: 0;
   height: 50px;
-  background-color: lightblue;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,12 +32,56 @@ body {
     brightness(85%) contrast(119%);
 }
 
-.header .nave .nav-btn {
+.header .menu-btn {
+  display: none;
+}
+
+.header .nav-btn {
+  z-index: 99;
+  position: relative;
   display: block;
-  height: 2px;
-  width: 30px;
+  height: 5px;
+  width: 35px;
   background-color: var(--Very-dark-blue);
 }
+.header .nav-btn::before {
+  position: absolute;
+  top: 10px;
+  display: block;
+  content: "";
+  height: 5px;
+  width: 35px;
+  background-color: var(--Very-dark-blue);
+}
+.header .nav-btn::after {
+  position: absolute;
+  display: block;
+  top: -10px;
+  content: "";
+  height: 5px;
+  width: 35px;
+  background-color: var(--Very-dark-blue);
+}
+
+.nav {
+  position: fixed;
+  width: 55%;
+  height: 100%;
+  top: -10px;
+  left: 150px;
+  background-color: aquamarine;
+}
+.nav li:first-child {
+  padding-top: 100px;
+}
+.nav li {
+  font-family: "Inter", sans-serif;
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
